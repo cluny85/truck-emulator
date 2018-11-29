@@ -1,0 +1,11 @@
+.DS_store
+node_modules/
+coverage/
+.nyc_output/
+npm-debug-*
+v8-compile-*
+yarn-error.log
+
+package-lock\.json
+yarn.lock
+src/server
