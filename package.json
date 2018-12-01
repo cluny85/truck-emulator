@@ -7,24 +7,13 @@
     "lint": "eslint --ext .js .",
     "start": "nodemon --watch .",
     "debug": "node --inspect=0.0.0.0:9229 .",
-    "start:dev": "pm2 start ecosystem.config.js",
-    "start:pro": "NODE_ENV=production node ./node_modules/pm2/bin/pm2 start index.js --name api.bob.io",
-    "test": "./node_modules/.bin/nyc mocha -R spec 'src/**/*.test.js' --exit",
-    "test:dev": "NODE_ENV=development mocha --recursive spec 'src/**/*.test.js' --exit",
-    "test:pre": "NODE_ENV=preproduction mocha -R spec 'src/**/*.test.js' --exit",
-    "test:pro": "NODE_ENV=production mocha -R spec 'src/**/*.test.js' --exit",
-    "test:html": "./node_modules/.bin/nyc --reporter=html mocha -R spec 'src/**/*.test.js' --exit",
-    "gen:coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov mocha -R spec 'src/**/*.test.js' --exit && ./node_modules/.bin/coveralls"
+    "test": "./node_modules/.bin/nyc mocha -R spec 'src/**/*.test.js' --exit"
   },
   "env": [
     "mocha"
   ],
   "dependencies": {
-    "moment": "^2.22.2",
-    "moment-timezone": "^0.5.23",
-    "socket.io-client": "^2.2.0",
-    "uniqid": "^5.0.3",
-    "ws": "^6.1.2"
+    "socket.io-client": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

@@ -1,10 +1,12 @@
-const server = require('./server');
+// const server = require('./server');
 const Truck = require('./truck');
 
 module.exports = init;
 
-function init({ socketAddress }) {
+function init({ socketAddress, trucks = 1 }) {
   console.log('Init Truck Emulator...');
-  if (server) server(socketAddress);
-  Truck(undefined, socketAddress);
+  // server(socketAddress);
+  for (let i = 0; i < trucks; i++) {
+    Truck({ id: i + 1 }, socketAddress);
+  }
 }

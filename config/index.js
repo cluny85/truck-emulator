@@ -7,4 +7,5 @@ module.exports = {
     url    : 'http://localhost',
     port   : 40718,
   },
+  trucks: 9,
 };
